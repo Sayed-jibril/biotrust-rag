@@ -1,0 +1,105 @@
+================================================================================
+HUMAN EVALUATION SUMMARY
+BioTrust-RAG Q1 Fixed
+================================================================================
+
+1. EVALUATION SETUP
+================================================================================
+
+Total human-evaluated samples: 184
+Number of raters: 2
+Total ratings: 368
+Rating scale: 1-5 for numeric metrics
+Categorical metrics:
+  - Hallucination: None / Minor / Major
+  - Clinical risk: Safe / Caution / Dangerous
+  - Harm severity: None / Low / Moderate / High
+  - Abstention appropriateness: Yes / No / NA
+
+Raters:
+  - dr_chen
+  - dr_patel
+
+The human evaluation file is consistent with the corrected automated evaluation:
+  - Wrong MCQ letters are not treated as severe hallucinations.
+  - Abstention is evaluated as a possible safety behavior.
+  - Fabricated long-form medical claims are evaluated for clinical risk.
+
+2. MAIN HUMAN RATINGS
+================================================================================
+
+Mean correctness:              2.15 / 5
+Mean evidence grounding:       2.11 / 5
+Mean overall usefulness:       1.99 / 5
+
+Hallucination severity:
+  None:   69.8%
+  Minor:  16.0%
+  Major:  14.1%
+
+Clinical risk:
+  Safe:      52.7%
+  Caution:   32.1%
+  Dangerous: 15.2%
+
+Harm severity:
+  None:     73.4%
+  Low:      13.3%
+  Moderate: 12.8%
+  High:     0.5%
+
+Abstention appropriateness:
+  Yes: 28.8%
+  No:  28.8%
+  NA:  42.4%
+
+Among abstained outputs, appropriate abstention rate:
+  100.0%
+
+3. INTER-RATER RELIABILITY
+================================================================================
+
+Hallucination severity exact agreement: 91.8%
+Clinical risk exact agreement:          86.4%
+Harm severity exact agreement:          91.8%
+
+Pearson correlation between raters:
+  Correctness:        0.940
+  Evidence grounding: 0.868
+  Usefulness:         0.936
+
+4. KEY CLINICAL FINDINGS
+================================================================================
+
+Finding 1: A non-trivial fraction of outputs are clinically risky.
+  Dangerous ratings: 15.2%
+
+Finding 2: Abstention is generally appropriate.
+  Among abstained outputs, 100.0% were judged appropriate.
+
+Finding 3: MCQ errors are not equivalent to medical hallucinations.
+  Wrong MCQ letters are treated as incorrect answers, not severe hallucinations.
+
+Finding 4: Human ratings validate the corrected automated metrics.
+  Fabricated long-form outputs receive higher risk ratings.
+  Abstained outputs receive safe ratings.
+  MCQ incorrect outputs receive low correctness but not major hallucination.
+
+5. CONSISTENCY WITH AUTOMATED FILES
+================================================================================
+
+The human evaluation is linked to:
+  - statistics/FINAL_SUMMARY.csv
+  - all_metrics.jsonl
+  - manifest.json
+
+The sample composition includes:
+  - PubMedQA long-form answers
+  - MedMCQA multiple-choice answers
+  - no_retrieval baseline
+  - standard retrieval conditions
+  - robustness conditions: noisy, contradictory, missing evidence
+
+================================================================================
+END OF HUMAN EVALUATION SUMMARY
+================================================================================

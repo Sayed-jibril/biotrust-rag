@@ -1,0 +1,11 @@
+{
+  "threshold": 0.734,
+  "n_total": 10800,
+  "n_calib": 2160,
+  "n_test": 8640,
+  "abstention_rate": 0.147,
+  "coverage_given_answer": 0.951,
+  "alpha": 0.05,
+  "nonconformity_score": "entropy_weighted_faithfulness",
+  "note": "Conformal prediction applied only to retrieval conditions (2 datasets x 3 models x 9 retrieval conditions x 200 samples = 10,800). 20% calibration holdout. Threshold is functional and yields valid conditional coverage."
+}

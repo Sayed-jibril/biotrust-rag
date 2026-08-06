@@ -1,0 +1,85 @@
+{
+  "experiment": "BioTrust-RAG Q1 Fixed",
+  "completed_at": "2026-08-05 18:45:00",
+  "datasets": [
+    "pubmedqa",
+    "medmcqa"
+  ],
+  "models": [
+    "flan-t5-large",
+    "mistral-7b-instruct",
+    "biomistral-7b"
+  ],
+  "retrievers": [
+    "no_retrieval",
+    "bm25",
+    "faiss_minilm",
+    "faiss_medcpt",
+    "hybrid_medcpt",
+    "medcpt_rerank",
+    "random"
+  ],
+  "robustness_modes": [
+    "noisy1",
+    "contradictory",
+    "missing_evidence"
+  ],
+  "conditions": [
+    "no_retrieval",
+    "bm25",
+    "faiss_minilm",
+    "faiss_medcpt",
+    "hybrid_medcpt",
+    "medcpt_rerank",
+    "random",
+    "noisy1",
+    "contradictory",
+    "missing_evidence"
+  ],
+  "records_per_cell": 200,
+  "total_records": 12000,
+  "total_conditions": 10,
+  "figures_generated": 15,
+  "statistical_methods": [
+    "Bootstrap CI (1000 iterations)",
+    "Holm-Bonferroni correction",
+    "Wilcoxon signed-rank test",
+    "Paired permutation test (tie-safe)",
+    "Fisher's exact test",
+    "Friedman test",
+    "Cliff's delta effect size",
+    "Conformal prediction"
+  ],
+  "reviewer_fixes": [
+    "Removed failed MedQA dataset from claims",
+    "Added all 10 conditions including faiss_minilm and random",
+    "Corrected total record count to 12,000",
+    "Applied bifurcated evaluation for MCQ and long-form QA",
+    "Wrong MCQ letters are no longer counted as severe hallucinations",
+    "Human evaluation expanded to 184 samples x 2 raters",
+    "Conformal threshold calibrated and coverage validated",
+    "Partial class categories sum exactly to n_partial",
+    "Robustness analysis included for noisy, contradictory, and missing evidence"
+  ],
+  "output_files": {
+    "manifest": "manifest.json",
+    "final_summary": "statistics/FINAL_SUMMARY.csv",
+    "conformal": "statistics/conformal_analysis.json",
+    "partial_class": "statistics/partial_class_analysis.json",
+    "llm_validation": "validation/llm_claim_validation.json",
+    "human_eval_full": "human_eval/human_eval_full.csv",
+    "human_eval_blind": "human_eval/human_eval_blind.csv",
+    "human_eval_rated": "human_eval/human_eval_rated.csv",
+    "human_evaluation_summary": "HUMAN_EVALUATION_SUMMARY.txt",
+    "all_metrics": "all_metrics.jsonl"
+  },
+  "consistency_checks": {
+    "total_records_equals_12000": true,
+    "summary_rows_expected": true,
+    "partial_categories_sum_to_n_partial": true,
+    "conformal_calib_plus_test_equals_total": true,
+    "human_eval_samples": 184,
+    "human_eval_raters": 2,
+    "human_eval_ratings": 368
+  }
+}

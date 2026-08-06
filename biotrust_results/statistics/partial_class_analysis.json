@@ -1,0 +1,66 @@
+{
+  "n_partial": 2847,
+  "derivation": "Subset of 12,000 records where gt_class was Partial. This corresponds to 23.7% of total records.",
+  "categories": [
+    {
+      "partial_category": "Parametric Partial",
+      "n": 892,
+      "pct": 31.3,
+      "mean_gt": 0.512,
+      "mean_faith": 0.634,
+      "description": "Model provides a partially correct answer from parametric memory with limited grounding in retrieved context."
+    },
+    {
+      "partial_category": "Mostly Unsupported",
+      "n": 623,
+      "pct": 21.9,
+      "mean_gt": 0.387,
+      "mean_faith": 0.412,
+      "description": "Claims lack sufficient evidence support from retrieved context."
+    },
+    {
+      "partial_category": "Supported Core + Extra Unsupported",
+      "n": 534,
+      "pct": 18.8,
+      "mean_gt": 0.567,
+      "mean_faith": 0.589,
+      "description": "Core answer is grounded, but additional claims are unsupported."
+    },
+    {
+      "partial_category": "Supported but Incomplete",
+      "n": 412,
+      "pct": 14.5,
+      "mean_gt": 0.623,
+      "mean_faith": 0.712,
+      "description": "All claims are grounded, but the answer is incomplete."
+    },
+    {
+      "partial_category": "Mixed/Contradictory Evidence",
+      "n": 234,
+      "pct": 8.2,
+      "mean_gt": 0.445,
+      "mean_faith": 0.487,
+      "description": "Retrieved context contains conflicting or contradictory information."
+    },
+    {
+      "partial_category": "No Claim Analysis",
+      "n": 152,
+      "pct": 5.3,
+      "mean_gt": 0.5,
+      "mean_faith": null,
+      "description": "Short MCQ-format answers where NLI claim extraction is not applicable. These are handled by the corrected MCQ evaluation branch."
+    }
+  ],
+  "distribution": {
+    "Parametric Partial": 0.313,
+    "Mostly Unsupported": 0.219,
+    "Supported Core + Extra Unsupported": 0.188,
+    "Supported but Incomplete": 0.145,
+    "Mixed/Contradictory Evidence": 0.082,
+    "No Claim Analysis": 0.053
+  },
+  "consistency_check": {
+    "category_sum_equals_n_partial": true,
+    "sum_categories": 2847
+  }
+}

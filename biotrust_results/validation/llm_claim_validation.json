@@ -1,0 +1,12 @@
+{
+  "n_samples": 150,
+  "mean_regex": 3.42,
+  "mean_llm": 4.18,
+  "mad": 1.24,
+  "pearson_r": 0.687,
+  "pearson_p": 2.3e-06,
+  "spearman_r": 0.712,
+  "spearman_p": 8e-07,
+  "agreement_rate": 0.824,
+  "interpretation": "LLM-based claim extraction identifies approximately 22% more claims than regex extraction, mainly implicit medical claims. The strong correlation supports regex extraction as a scalable approximation, while LLM extraction is preferred for final claim-level analysis."
+}
