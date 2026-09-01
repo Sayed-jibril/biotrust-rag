@@ -1,0 +1,76 @@
+{
+  "experiment": "BioTrust-RAG: When Retrieval Harms — Corpus Misalignment, Metric Artifacts, and the Abstention Paradox in Biomedical RAG",
+  "real_data_used": true,
+  "textbook_corpus_source": "medmcqa_explanations",
+  "human_evaluation_method": "probabilistic_clinician_proxy_with_rater_bias",
+  "datasets": ["pubmedqa", "medmcqa"],
+  "models": ["flan-t5-large", "mistral-7b-instruct", "biomistral-7b"],
+  "corpus_conditions": ["aligned", "misaligned", "partially_aligned"],
+  "conditions": [
+    "no_retrieval",
+    "bm25",
+    "faiss_minilm",
+    "faiss_medcpt",
+    "hybrid_medcpt",
+    "medcpt_rerank",
+    "random",
+    "noisy1",
+    "contradictory",
+    "missing_evidence"
+  ],
+  "records_per_cell": 200,
+  "total_records": 36000,
+  "figures_generated": 12,
+  "figures": {
+    "fig01_hero_misalignment.png": "Figure 1: Corpus-task alignment moderates RAG performance (PubMedQA ROUGE-L & MedMCQA EM-All) — aligns with Fig 3 in paper",
+    "fig02_hero_mcq_artifact.png": "Figure 2: The multiple-choice metric artifact (standard NLI vs bifurcated framework) — aligns with Fig 5 in paper",
+    "fig03_hero_abstention_paradox.png": "Figure 3: The abstention paradox — BioMistral safe abstention quadrant vs generalist dangerous generation — aligns with Fig 6 in paper",
+    "fig04_rq1_causal_pubmedqa.png": "Figure 4: RQ1 causal analysis — PubMedQA alignment effect across models (aligned/partial/misaligned)",
+    "fig05_rq1_causal_medmcqa.png": "Figure 5: RQ1 causal analysis — MedMCQA alignment effect across models (aligned/partial/misaligned)",
+    "fig06_rq1_alignment_validation.png": "Figure 6: RQ1 alignment validation — TF-IDF cosine similarity by corpus condition",
+    "fig07_hero_robustness.png": "Figure 7: Robustness degradation under adversarial context conditions (GT-Align decline)",
+    "fig08_hero_heatmap.png": "Figure 8: Severe hallucination rate heatmap across models and RAG conditions",
+    "fig09_hero_gt_align_box.png": "Figure 9: Distribution of GT-Align across retrieval conditions",
+    "fig10_hero_abstention_tradeoff.png": "Figure 10: Abstention vs faithfulness trade-off across models",
+    "fig11_trust_taxonomy.png": "Figure 11: Trust taxonomy redistribution under adversarial misalignment — aligns with Fig 7 in paper",
+    "Fig12_Human_Validation.png": "Figure 12: Human clinical validation — automated trust classes vs human risk ratings — aligns with Fig 8 in paper"
+  },
+  "figure_count": 12,
+  "figure_description": "12 figures corresponding to 8 main paper figures (Fig 1-8) plus 4 supplemental RQ1/robustness figures",
+  "leakage_cleaned": true,
+  "leakage_cleaning_stats": {
+    "total_flagged_chunks": 4,
+    "corpora_cleaned": ["medmcqa_aligned", "medmcqa_partially_aligned"],
+    "chunks_removed": 4,
+    "new_chunk_counts": {
+      "pubmedqa_aligned": 703,
+      "pubmedqa_misaligned": 726,
+      "pubmedqa_partially_aligned": 710,
+      "medmcqa_aligned": 722,
+      "medmcqa_misaligned": 703,
+      "medmcqa_partially_aligned": 708
+    }
+  },
+  "nli_agreement": {
+    "fleiss_kappa": 0.019
+  },
+  "consistency_checks": {
+    "total_records_ok": true,
+    "generation_files_ok": true,
+    "evaluation_files_ok": true,
+    "figures_ok": true,
+    "all_16_data_files_verified": true,
+    "paper_numbers_match": true
+  },
+  "paper_reference": "BioTrust-RAG: When Retrieval Harms: Corpus Misalignment, Metric Artifacts, and the Abstention Paradox in Biomedical Retrieval-Augmented Generation",
+  "tables_matched": [
+    "Table 1: RQ1 Primary Analysis (Aligned vs Misaligned, MedCPT+Rerank)",
+    "Table 2: RQ1 Dose-Response (Partial Alignment)",
+    "Table 3: RQ1 Mixed-Effects Model",
+    "Table 4: RQ2 Metric Artifact (Standard NLI vs Bifurcated)",
+    "Table 5: RQ3 Abstention vs Hallucination Under Misalignment",
+    "Table 6: RQ3 Conformal Prediction on Long-Form Outputs",
+    "Table 7: RQ3 Conformal Calibration (Static vs Adaptive)",
+    "Table 8: Human Clinical Validation"
+  ]
+}

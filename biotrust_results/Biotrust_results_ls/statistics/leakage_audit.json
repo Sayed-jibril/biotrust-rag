@@ -1,0 +1,13 @@
+{
+  "dataset": "medmcqa",
+  "exact_match_found": false,
+  "max_4gram_jaccard": 0.4153,
+  "max_cosine_similarity": 0.9495,
+  "flagged_count": 4,
+  "flagged_samples": [
+    "Cervical vertebrae maturation index (CVMI) The size and shape changes in the bodies of ﬁve cervical vertebrae (second through sixth) are an accurate indicator of skeletal maturity. These can be assessed on a lateral cephalogram. Ref: Orthodontics: Diagnosis and Management of Malocclusion and Dentofacial Deformities, 3e, Om P. Kharbanda pdf no 873",
+    "Answer- D. Needle inseion in 2nd ICSThis is a case of tension pneumothorax. Although the new ATLS update is 5th intercostal space in mid maxillary line, but in this question we will go with a time tested method of needle in 2nd intercostal space.",
+    "LOADING DOSE = Vd * target plasma concentration The loading dose is primarily dependent on the volume of distribution of drugs. The loading dose is administered to achieve rapid action of drugs having high the volume of distribution. MAINTENANCE DOSE = Clearance * target plasma concentration",
+    "Ans: D. Tension in the muscle(Ref.: Ganong 25/e p232; Guyton 13/e p697, 701).Golgi tendon organ senses muscle tension.\"The Golgi organ (also called Golgi tendon organ, GTO, tendon organ, neurotendinous organ or neurotendinous spindle) senses changes in muscle tension.It is a proprioceptive sensory receptor organ that is at the origins and inseion of skeletal muscle fibers into the tendons of skeletal muscle. It provides the sensory component of the Golgi tendon reflex."
+  ]
+}

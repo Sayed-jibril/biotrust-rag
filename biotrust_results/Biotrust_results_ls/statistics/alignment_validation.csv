@@ -1,0 +1,7 @@
+dataset,corpus_condition,n_probe,mean_top3_relevance
+pubmedqa,aligned,30,0.343
+pubmedqa,misaligned,30,0.378
+pubmedqa,partially_aligned,30,0.361
+medmcqa,aligned,30,0.372
+medmcqa,misaligned,30,0.292
+medmcqa,partially_aligned,30,0.34

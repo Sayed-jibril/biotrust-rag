@@ -1,0 +1,16 @@
+{
+  "pooled_per_condition": {
+    "aligned": {
+      "coverage": 0.94,
+      "abstention": 0.624
+    },
+    "partially_aligned": {
+      "coverage": 0.915,
+      "abstention": 0.624
+    },
+    "misaligned": {
+      "coverage": 0.839,
+      "abstention": 0.624
+    }
+  }
+}

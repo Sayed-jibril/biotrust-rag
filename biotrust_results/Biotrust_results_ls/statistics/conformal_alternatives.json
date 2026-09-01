@@ -1,0 +1,55 @@
+{
+  "pooled": {
+    "method": "pooled",
+    "threshold": 0.476,
+    "overall_coverage": 0.907,
+    "abstention": 0.624
+  },
+  "group_conditional": [
+    {
+      "condition": "aligned",
+      "threshold": 0.412,
+      "coverage": 0.938,
+      "abstention": 0.635
+    },
+    {
+      "condition": "partial",
+      "threshold": 0.498,
+      "coverage": 0.915,
+      "abstention": 0.635
+    },
+    {
+      "condition": "misaligned",
+      "threshold": 0.623,
+      "coverage": 0.841,
+      "abstention": 0.635
+    }
+  ],
+  "adaptive": {
+    "method": "adaptive",
+    "gamma": 0.005,
+    "overall_coverage": 0.947,
+    "abstention": 0.53,
+    "final_threshold": 0.601,
+    "per_condition": [
+      {
+        "condition": "aligned",
+        "coverage": 0.948,
+        "abstention": 0.528,
+        "final_threshold": 0.526
+      },
+      {
+        "condition": "partial",
+        "coverage": 0.947,
+        "abstention": 0.531,
+        "final_threshold": 0.601
+      },
+      {
+        "condition": "misaligned",
+        "coverage": 0.945,
+        "abstention": 0.534,
+        "final_threshold": 0.462
+      }
+    ]
+  }
+}
