@@ -1,0 +1,4 @@
+model,bifurcated,deberta,roberta,t5
+FLAN-T5-Large,10.8,67.8,75.2,74.1
+Mistral-7B-Instruct,9.5,70.5,63.1,58.9
+BioMistral-7B,3.8,41.5,61.4,53.2
