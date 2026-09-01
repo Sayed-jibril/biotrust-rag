@@ -1,5 +1,0 @@
-dataset,metric,term,coef,se,p_value,n_obs
-pubmedqa,rouge_l,"C(corpus_condition, Treatment(reference='aligned'))[T.misaligned]",-0.036,0.001,0.0,18000
-pubmedqa,rouge_l,"C(corpus_condition, Treatment(reference='aligned'))[T.partially_aligned]",-0.018,0.001,0.0,18000
-medmcqa,exact_match_all,"C(corpus_condition, Treatment(reference='aligned'))[T.misaligned]",-0.111,0.007,0.0,18000
-medmcqa,exact_match_all,"C(corpus_condition, Treatment(reference='aligned'))[T.partially_aligned]",-0.06,0.008,0.0,18000

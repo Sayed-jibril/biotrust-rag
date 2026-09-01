@@ -1,7 +1,0 @@
-corpus_key,docs,chunks,mean_chunk_words
-pubmedqa_aligned,700,703,59.9
-pubmedqa_misaligned,700,726,71.2
-pubmedqa_partially_aligned,700,710,64.9
-medmcqa_aligned,700,722,71.3
-medmcqa_misaligned,700,703,59.9
-medmcqa_partially_aligned,700,708,64.9
